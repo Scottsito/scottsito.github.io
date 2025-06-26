@@ -1,22 +1,41 @@
 
+:root {
+  --bg-dark: #1e112e;
+  --text-dark: #e5d4ff;
+  --bg-light: #f6f3ff;
+  --text-light: #2a1645;
+  --accent: #caa6ff;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #1e112e;
-  color: #e5d4ff;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
   scroll-behavior: smooth;
+  transition: background-color 0.4s, color 0.4s;
+  position: relative;
+  overflow-x: hidden;
 }
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
 header {
   text-align: center;
   padding: 40px;
   background-color: #2a1645;
 }
+
 nav a {
   margin: 0 15px;
-  color: #caa6ff;
+  color: var(--accent);
   text-decoration: none;
   font-weight: bold;
 }
+
 .project-list a {
   display: block;
   background: #2c1c48;
@@ -25,16 +44,53 @@ nav a {
   padding: 15px;
   margin-bottom: 15px;
   text-decoration: none;
-  color: #e5d4ff;
+  color: var(--text-dark);
 }
+
 #profile-pic {
   width: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
 footer {
   text-align: center;
   padding: 20px;
   background-color: #2a1645;
-  color: #caa6ff;
+  color: var(--accent);
+}
+
+#background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  background-size: 200% 200%;
+  animation: animateBackground 10s ease infinite;
+}
+
+@keyframes animateBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
