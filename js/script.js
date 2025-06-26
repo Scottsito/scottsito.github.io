@@ -1,7 +1,7 @@
 
-// Dark/light toggle
+// Theme toggle
 document.getElementById('toggle-mode').addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+  document.body.classList.toggle('light');
 });
 
 // Load working GitHub repos
@@ -20,9 +20,9 @@ fetch('https://api.github.com/users/Scottsito/repos')
 
 // Secret ARG redirect
 document.addEventListener('keydown', (e) => {
-  if (e.ctrlKey && e.key.toLowerCase() === 'r') {
+  if (e.ctrlKey && e.key.toLowerCase() === 'b') {
     document.addEventListener('keydown', (e2) => {
-      if (e2.key === '*') {
+      if (e2.key === 'v') {
         const box = document.getElementById('secret-box');
         box.style.display = 'block';
         document.getElementById('secret-input').addEventListener('keydown', (ev) => {
