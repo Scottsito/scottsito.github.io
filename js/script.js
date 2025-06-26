@@ -1,4 +1,9 @@
 
+// Theme toggle
+document.getElementById('toggle-mode').addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});
+
 // Load working GitHub repos
 fetch('https://api.github.com/users/Scottsito/repos')
   .then(response => response.json())
