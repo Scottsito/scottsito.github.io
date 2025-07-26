@@ -32,6 +32,8 @@ header {
   text-align: center;
   padding: 40px;
   background-color: #c891c9;
+  border: 1px solid #f4b5f9;
+  border-radius: 10px;
 }
 
 nav a {
