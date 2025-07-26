@@ -1,10 +1,8 @@
 
 :root {
-  --bg-dark: #1e112e;
-  --text-dark: #e5d4ff;
-  --bg-light: #f6f3ff;
-  --text-light: #2a1645;
-  --accent: #caa6ff;
+  --bg-dark: #e3b2ed;
+  --text-dark: #3f3c37;
+  --accent: #ffaedc;
 }
 
 body {
@@ -16,11 +14,6 @@ body {
   transition: background-color 0.4s, color 0.4s;
   position: relative;
   overflow-x: hidden;
-}
-
-body.light {
-  background-color: var(--bg-light);
-  color: var(--text-light);
 }
 
 header {
