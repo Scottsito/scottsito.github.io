@@ -17,7 +17,7 @@ body {
 }
 
 
-about {
+.about a {
  display: block;
   background: #c891c9;
   border: 1px solid #f4b5f9;
