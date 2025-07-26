@@ -71,3 +71,13 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+// canves cover page
+function resizeCanvas() {
+  canvas.width = document.documentElement.scrollWidth;
+  canvas.height = document.documentElement.scrollHeight;
+}
+
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("scroll", resizeCanvas); // in case height grows
+resizeCanvas(); // call it once at start
