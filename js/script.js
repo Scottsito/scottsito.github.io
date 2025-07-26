@@ -81,3 +81,22 @@ function resizeCanvas() {
 window.addEventListener("resize", resizeCanvas);
 window.addEventListener("scroll", resizeCanvas); // in case height grows
 resizeCanvas(); // call it once at start
+
+
+//circles look normal
+function resizeCanvas() {
+  const canvas = document.getElementById("bg-canvas");
+  const dpr = window.devicePixelRatio || 1;
+  
+  const width = document.documentElement.scrollWidth;
+  const height = document.documentElement.scrollHeight;
+
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0); // normalize drawing to scale
+}
