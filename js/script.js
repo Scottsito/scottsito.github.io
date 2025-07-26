@@ -44,7 +44,7 @@ resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 let particles = [];
-for (let i = 0; i < 3000; i++) {
+for (let i = 0; i < 1000; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
