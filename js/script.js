@@ -8,7 +8,6 @@ fetch('https://api.github.com/users/Scottsito/repos')
       const a = document.createElement('a');
       a.href = repo.homepage;
       a.textContent = `🔗 ${repo.name}`;
-      a.target = '_blank';
       list.appendChild(a);
     });
   });
